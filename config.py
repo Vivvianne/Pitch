@@ -3,7 +3,7 @@ import os
 class Config:
     
     SQLACHEMY_TRACK_MODIFICATIONS = False
-    SQLALCHEMY_DATABASE_MODIFICATIONS = 'postgresql+psycopg2://nkimani:her1234@localhost/pitch'
+    SQLALCHEMY_DATABASE_MODIFICATIONS = 'postgresql+psycopg2://nkimani:her1234\q@localhost/pitch'
     
     SECRET_KEY = 'Im not boarding'
     MAIL_SERVER = 'smtp.gmail.com'
