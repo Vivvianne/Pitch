@@ -26,7 +26,7 @@ def test():
 
 @manager.shell
 def make_shell_context():
-    return dict(app=app, db=db, User=User_pitch, Pitch = Entries, Comments=Comments, PitchCategory=Category)
+    return dict(app=app, db=db, User=User_pitch, Pitch = Pitch, Comments=Comments, PitchCategory=PitchCategory)
     pass
 
 
