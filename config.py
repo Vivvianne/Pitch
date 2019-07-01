@@ -3,7 +3,7 @@ import os
 class Config:
     
     SQLACHEMY_TRACK_MODIFICATIONS = False
-    SQLALCHEMY_DATABASE_MODIFICATIONS = 'postgresql+psycopg2://nkimani:her1234\q@localhost/pitch'
+    #SQLALCHEMY_DATABASE_MODIFICATIONS = 'postgresql+psycopg2://nkimani:her1234\q@localhost/pitch'
     
     SECRET_KEY = 'Im not boarding'
     MAIL_SERVER = 'smtp.gmail.com'
@@ -13,19 +13,21 @@ class Config:
     MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
     
 class ProdConfig(Config):
-        SQLALCHEMY_DATABASE_URI='postgresql+psycopg2://nkimani:her1234@localhost/pitch'
-        SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
+    
+   pass
         
         
 class DevConfig(Config):
-        DEBUG = True
+    
+    SQLALCHEMY_DATABASE_URI='postgresql+psycopg2://nkimani:her1234@127.0.0.1/try'
+    DEBUG = True
         
-class TestConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://nkimani:her1234@localhost/pitch'
+#class TestConfig(Config):
+    #SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://nkimani:her1234@localhost/pitch'
         
         
 config_options = {
     'development': DevConfig,
     'production': ProdConfig,
-    'test':TestConfig
+    #'test':TestConfig
 }
