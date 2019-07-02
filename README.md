@@ -46,7 +46,7 @@ A user needs to sign up
 A user the needs to sign in to vote and post pitches
 
 ## Live link
-You can view the project from here 
+You can view the project from here https://pitchput.herokuapp.com/
 
 ## Contacts
 For further questions you can send an email to ndiahav@gmail.com
